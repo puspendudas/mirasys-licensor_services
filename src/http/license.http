@@ -1,0 +1,18 @@
+# baseURL
+@baseURL = http://localhost:3000/api/v1
+
+###
+# Get License File
+POST {{ baseURL }}/licenses
+Content-Type: application/json
+
+{
+    "machineId": "asdasdasd",
+	"expires": 1702386871,
+    "isTrial": false,
+    "maxUsers": 10,
+    "maxCameras": 10,
+    "assignmentSupport": true,
+    "communicationsSupport": true
+}
+
