@@ -7,7 +7,7 @@ import AuthService from '@services/auth.service';
 class AuthController {
   public authService = new AuthService();
 
-  public async signUp(req: Request, res: Response, next: NextFunction) {
+  public signUp = async (req: Request, res: Response, next: NextFunction) => {
     try {
       const userData: CreateUserDto = req.body;
       const signUpUserData: User = await this.authService.signup(userData);
@@ -18,7 +18,7 @@ class AuthController {
     }
   };
 
-  public async logIn(req: Request, res: Response, next: NextFunction) {
+  public logIn = async  (req: Request, res: Response, next: NextFunction) => {
     try {
       const userData: CreateUserDto = req.body;
       const { cookie, findUser } = await this.authService.login(userData);
@@ -30,7 +30,7 @@ class AuthController {
     }
   };
 
-  public async logOut(req: RequestWithUser, res: Response, next: NextFunction) {
+  public logOut = async (req: RequestWithUser, res: Response, next: NextFunction) => {
     try {
       const userData: User = req.user;
       const logOutUserData: User = await this.authService.logout(userData);
