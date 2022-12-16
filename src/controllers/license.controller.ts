@@ -9,7 +9,7 @@ export class LicenseController {
         // console.log(license);
         // base64 encode the license
         res.header('Content-Type', 'text/plain');
-        res.header('Content-Disposition', 'attachment; filename="license.lic"');
+        res.header('Content-Disposition', 'attachment; filename="license.mirasys"');
         res.send(license);
     }
 
