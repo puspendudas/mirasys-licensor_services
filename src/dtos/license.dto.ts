@@ -7,6 +7,9 @@ export class LicenseDto {
     @IsNumber()
     public expires: number;
 
+    @IsNumber()
+    public validFrom: number;
+
     @IsBoolean()
     public isTrial: boolean;
 
@@ -21,5 +24,6 @@ export class LicenseDto {
 
     @IsBoolean()
     public communicationsSupport: boolean;
-    
+
+    public s: string;    
 }

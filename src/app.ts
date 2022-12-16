@@ -9,6 +9,8 @@ import DB from '@databases';
 import { Routes } from '@interfaces/routes.interface';
 import errorMiddleware from '@middlewares/error.middleware';
 import { logger, stream } from '@utils/logger';
+import { License } from './services/license.service';
+import { LicenseDto } from './dtos/license.dto';
 
 class App {
   public app: express.Application;
@@ -27,6 +29,17 @@ class App {
   }
 
   public listen() {
+    // let li = new License();
+    // let data = li.encryptLicense({
+    //   machineId: '1234567890',
+    //   expires: 1234567890,
+    //   isTrial: true,
+    //   maxUsers: 10,
+    //   maxCameras: 10,
+    //   assignmentSupport: true,
+    //   communicationsSupport: true
+    // } as LicenseDto);
+    // console.log(data);
     this.app.listen(this.port, () => {
       logger.info(`===================================`);
       logger.info(`======== ENV: ${this.env} ========`);

@@ -7,12 +7,12 @@ POST {{ baseURL }}/licenses
 Content-Type: application/json
 
 {
-    "machineId": "asdasdasd",
-	"expires": 1702386871,
+    "machineId": "OMCKS-QKFTN-IVRMY-LYPTJ",
+	"expires": 1771186124,
+    "validFrom": 1671186124,
     "isTrial": false,
     "maxUsers": 10,
     "maxCameras": 10,
     "assignmentSupport": true,
     "communicationsSupport": true
 }
-
